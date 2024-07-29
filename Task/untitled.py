@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.5),
-    on Thu Jul 25 17:09:36 2024
+    on Mon Jul 29 10:45:06 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -29,6 +29,7 @@ from numpy import (sin, cos, tan, log, log10, pi, average,
 from numpy.random import random, randint, normal, shuffle, choice as randchoice
 import os  # handy system and path functions
 import sys  # to get file system encoding
+import pandas as pd
 
 from psychopy.hardware import keyboard
 
@@ -130,7 +131,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/arnavkapur/Desktop/Task/untitled.py',
+        originPath='/Users/hz9/dev/speech_decoding/Task/untitled.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -345,16 +346,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "trial" ---
-    textbox = visual.TextBox(
-         win, text='aaa',
-         pos=(0, 0),
-         size=(1.8, 1.5),
-         name='textbox',
-         font_size=80,
-         font_color=(1, 1, 1, 1),
-         line_spacing=0.5,
-         line_spacing_units='ratio'
-    )
+    
+    # --- Initialize components for Routine "trial" ---
     
     # --- Initialize components for Routine "task2" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -366,23 +359,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "trial" ---
-#    textbox = visual.TextBox2(
-#         win, text=sentence
-#    , placeholder='Type here...', font='Arial',
-#         pos=(0, 0),     letterHeight=0.05,
-#         size=(0.5, 0.5), borderWidth=2.0,
-#         color='white', colorSpace='rgb',
-#         opacity=None,
-#         bold=False, italic=False,
-#         lineSpacing=1.0, speechPoint=None,
-#         padding=0.0, alignment='center',
-#         anchor='center', overflow='visible',
-#         fillColor=None, borderColor=None,
-#         flipHoriz=False, flipVert=False, languageStyle='LTR',
-#         editable=False,
-#         name='textbox',
-#         depth=0, autoLog=True,
-#    )
+    textbox_1 = visual.TextBox(
+         win, text='aaa',
+         pos=(0, 0),
+         size=(2, 1.5),
+         name='textbox',
+         font_size=80,
+         font_color=(1, 1, 1, 1),
+         line_spacing=0.5,
+         line_spacing_units='ratio'
+    )
     
     # create some handy timers
     
@@ -416,9 +402,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continueRoutine = True
     # update component parameters for each repeat
     thisExp.addData('trial.started', globalClock.getTime(format='float'))
-    textbox.setText(sentence) # changed
+#    textbox_1.reset()
+#    textbox_1.setText(sentence)
     # keep track of which components have finished
-    trialComponents = [textbox]
+    trialComponents = [textbox_1]
     for thisComponent in trialComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -431,8 +418,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    printed = False # added
-    
     # --- Run Routine "trial" ---
     routineForceEnded = not continueRoutine
     while continueRoutine and routineTimer.getTime() < 1.0:
@@ -443,70 +428,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *textbox* updates
-        textbox.draw()
+        # *textbox_1* updates
+        textbox_1.draw()
         
-        if not printed:
-            index_array = []
-            char_array = []
-            x_array = []
-            y_array = []
-            height_array = []
-            width_array = []
-            for i in range(len(text)):
-                try:
-                    info = textbox.getGlyphPositionForTextIndex(i)
-                except:
-                    break
-                index_array.append(i)
-                char_array.append(text[i])
-                x_array.append(info[0])
-                y_array.append(info[1])
-                width_array.append(info[2])
-                height_array.append(info[3])
-            printed = True
-            # Things to do after TextLoop
-            dic = {'index': index_array,
-                   'char': char_array,
-                   'x': x_array,
-                   'y': y_array,
-                   'height': height_array,
-                   'width': width_array
-                   }
-            text_coordinates = pd.DataFrame(dic)
-            text_coordinates.to_csv(f'{str(i)}.csv')
-                
-#        # if textbox is starting this frame...
-#        if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if textbox_1 is starting this frame...
+#        if textbox_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
 #            # keep track of start time/frame for later
-#            textbox.frameNStart = frameN  # exact frame index
-#            textbox.tStart = t  # local t and not account for scr refresh
-#            textbox.tStartRefresh = tThisFlipGlobal  # on global time
-#            win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
+#            textbox_1.frameNStart = frameN  # exact frame index
+#            textbox_1.tStart = t  # local t and not account for scr refresh
+#            textbox_1.tStartRefresh = tThisFlipGlobal  # on global time
+#            win.timeOnFlip(textbox_1, 'tStartRefresh')  # time at next scr refresh
 #            # add timestamp to datafile
-#            thisExp.timestampOnFlip(win, 'textbox.started')
+#            thisExp.timestampOnFlip(win, 'textbox_1.started')
 #            # update status
-#            textbox.status = STARTED
-#            textbox.setAutoDraw(True)
+#            textbox_1.status = STARTED
+#            textbox_1.setAutoDraw(True)
 #        
-#        # if textbox is active this frame...
-#        if textbox.status == STARTED:
+#        # if textbox_1 is active this frame...
+#        if textbox_1.status == STARTED:
 #            # update params
 #            pass
 #        
-#        # if textbox is stopping this frame...
-#        if textbox.status == STARTED:
+#        # if textbox_1 is stopping this frame...
+#        if textbox_1.status == STARTED:
 #            # is it time to stop? (based on global clock, using actual start)
-#            if tThisFlipGlobal > textbox.tStartRefresh + 1.0-frameTolerance:
+#            if tThisFlipGlobal > textbox_1.tStartRefresh + 1.0-frameTolerance:
 #                # keep track of stop time/frame for later
-#                textbox.tStop = t  # not accounting for scr refresh
-#                textbox.tStopRefresh = tThisFlipGlobal  # on global time
-#                textbox.frameNStop = frameN  # exact frame index
+#                textbox_1.tStop = t  # not accounting for scr refresh
+#                textbox_1.tStopRefresh = tThisFlipGlobal  # on global time
+#                textbox_1.frameNStop = frameN  # exact frame index
 #                # add timestamp to datafile
-#                thisExp.timestampOnFlip(win, 'textbox.stopped')
+#                thisExp.timestampOnFlip(win, 'textbox_1.stopped')
 #                # update status
-#                textbox.status = FINISHED
-#                textbox.setAutoDraw(False)
+#                textbox_1.status = FINISHED
+#                textbox_1.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -573,9 +528,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         thisExp.addData('trial.started', globalClock.getTime(format='float'))
-        textbox.reset()
+#        textbox_1.reset()
+        textbox_1.setText(sentence)
         # keep track of which components have finished
-        trialComponents = [textbox]
+        trialComponents = [textbox_1]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -588,6 +544,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
         frameN = -1
         
+        printed=False
+        
         # --- Run Routine "trial" ---
         routineForceEnded = not continueRoutine
         while continueRoutine and routineTimer.getTime() < 1.0:
@@ -598,39 +556,70 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *textbox* updates
+            # *textbox_1* updates
+            textbox_1.draw()
             
-            # if textbox is starting this frame...
-            if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                textbox.frameNStart = frameN  # exact frame index
-                textbox.tStart = t  # local t and not account for scr refresh
-                textbox.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'textbox.started')
-                # update status
-                textbox.status = STARTED
-                textbox.setAutoDraw(True)
+            if not printed:
+                index_array = []
+                char_array = []
+                x_array = []
+                y_array = []
+                height_array = []
+                width_array = []
+                for i in range(len(sentence)):
+                    try:
+                        info = textbox_1.getGlyphPositionForTextIndex(i)
+                    except:
+                        pass
+                    index_array.append(sentence_id)
+                    char_array.append(sentence[i])
+                    x_array.append(info[0])
+                    y_array.append(info[1])
+                    width_array.append(info[2])
+                    height_array.append(info[3])
+                printed = True
+                # Things to do after TextLoop
+                dic = {'index': index_array,
+                       'char': char_array,
+                       'x': x_array,
+                       'y': y_array,
+                       'height': height_array,
+                       'width': width_array
+                       }
+                text_coordinates = pd.DataFrame(dic)
+                text_coordinates.to_csv(f'../data/text_coordinates/{str(sentence_id)}.csv')
             
-            # if textbox is active this frame...
-            if textbox.status == STARTED:
-                # update params
-                pass
-            
-            # if textbox is stopping this frame...
-            if textbox.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > textbox.tStartRefresh + 1.0-frameTolerance:
-                    # keep track of stop time/frame for later
-                    textbox.tStop = t  # not accounting for scr refresh
-                    textbox.tStopRefresh = tThisFlipGlobal  # on global time
-                    textbox.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'textbox.stopped')
-                    # update status
-                    textbox.status = FINISHED
-                    textbox.setAutoDraw(False)
+            # if textbox_1 is starting this frame...
+#            if textbox_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+#                # keep track of start time/frame for later
+#                textbox_1.frameNStart = frameN  # exact frame index
+#                textbox_1.tStart = t  # local t and not account for scr refresh
+#                textbox_1.tStartRefresh = tThisFlipGlobal  # on global time
+#                win.timeOnFlip(textbox_1, 'tStartRefresh')  # time at next scr refresh
+#                # add timestamp to datafile
+#                thisExp.timestampOnFlip(win, 'textbox_1.started')
+#                # update status
+#                textbox_1.status = STARTED
+#                textbox_1.setAutoDraw(True)
+#            
+#            # if textbox_1 is active this frame...
+#            if textbox_1.status == STARTED:
+#                # update params
+#                pass
+#            
+#            # if textbox_1 is stopping this frame...
+#            if textbox_1.status == STARTED:
+#                # is it time to stop? (based on global clock, using actual start)
+#                if tThisFlipGlobal > textbox_1.tStartRefresh + 1.0-frameTolerance:
+#                    # keep track of stop time/frame for later
+#                    textbox_1.tStop = t  # not accounting for scr refresh
+#                    textbox_1.tStopRefresh = tThisFlipGlobal  # on global time
+#                    textbox_1.frameNStop = frameN  # exact frame index
+#                    # add timestamp to datafile
+#                    thisExp.timestampOnFlip(win, 'textbox_1.stopped')
+#                    # update status
+#                    textbox_1.status = FINISHED
+#                    textbox_1.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -833,9 +822,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         thisExp.addData('trial.started', globalClock.getTime(format='float'))
-        textbox.reset()
+        textbox_1.reset()
+        textbox_1.setText(sentence)
         # keep track of which components have finished
-        trialComponents = [textbox]
+        trialComponents = [textbox_1]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -858,39 +848,39 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *textbox* updates
+            # *textbox_1* updates
             
-            # if textbox is starting this frame...
-            if textbox.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # if textbox_1 is starting this frame...
+            if textbox_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                textbox.frameNStart = frameN  # exact frame index
-                textbox.tStart = t  # local t and not account for scr refresh
-                textbox.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
+                textbox_1.frameNStart = frameN  # exact frame index
+                textbox_1.tStart = t  # local t and not account for scr refresh
+                textbox_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(textbox_1, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'textbox.started')
+                thisExp.timestampOnFlip(win, 'textbox_1.started')
                 # update status
-                textbox.status = STARTED
-                textbox.setAutoDraw(True)
+                textbox_1.status = STARTED
+                textbox_1.setAutoDraw(True)
             
-            # if textbox is active this frame...
-            if textbox.status == STARTED:
+            # if textbox_1 is active this frame...
+            if textbox_1.status == STARTED:
                 # update params
                 pass
             
-            # if textbox is stopping this frame...
-            if textbox.status == STARTED:
+            # if textbox_1 is stopping this frame...
+            if textbox_1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > textbox.tStartRefresh + 1.0-frameTolerance:
+                if tThisFlipGlobal > textbox_1.tStartRefresh + 1.0-frameTolerance:
                     # keep track of stop time/frame for later
-                    textbox.tStop = t  # not accounting for scr refresh
-                    textbox.tStopRefresh = tThisFlipGlobal  # on global time
-                    textbox.frameNStop = frameN  # exact frame index
+                    textbox_1.tStop = t  # not accounting for scr refresh
+                    textbox_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    textbox_1.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'textbox.stopped')
+                    thisExp.timestampOnFlip(win, 'textbox_1.stopped')
                     # update status
-                    textbox.status = FINISHED
-                    textbox.setAutoDraw(False)
+                    textbox_1.status = FINISHED
+                    textbox_1.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
