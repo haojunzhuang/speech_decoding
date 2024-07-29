@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File “/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/app/builder/dialogs/__init__.py”, line 1826, in onOK
+  File “/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/app/builder/dialogs/__init__.py”, line 1715, in updateSummary
+  File “/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/data/utils.py”, line 426, in importConditions
+  File “<string>”, line 1
+    (Winthrop’s daughter, Rosemary Isabel Forbes, was Kerry’s mother.)
+             ^
+SyntaxError: invalid syntax

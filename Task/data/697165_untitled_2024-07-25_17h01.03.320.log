@@ -1,0 +1,75 @@
+7.8741 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+7.8749 	INFO 	Loaded monitor calibration from ['2024_07_25 16:34']
+8.1033 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=True, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffc9d0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffc970>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffc760>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fb5f0e43c70>, multiSample=False, name='window1', numSamples=2, pos=[696.0, 410.0], screen=0, size=array([1600, 1200]), stencilBits=8, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.1034 	EXP 	window1: backgroundImage = ''
+8.1034 	EXP 	window1: backgroundFit = 'none'
+8.1036 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1038 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1072 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1080 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1137 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1144 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1153 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1163 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1173 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1178 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1186 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1196 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1200 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1204 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1214 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1222 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1229 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1237 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1244 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1252 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1260 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1265 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1270 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1281 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1285 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1287 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.1308 	DEBUG 	Upload of Texture Font fontname complete
+8.1336 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1338 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1345 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1352 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fb5f0ffcaf0>
+8.1399 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1411 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1421 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.1423 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.1428 	DEBUG 	Upload of Texture Font fontname complete
+8.1459 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.1459 	EXP 	window1: recordFrameIntervals = False
+8.4222 	EXP 	window1: recordFrameIntervals = True
+8.6326 	WARNING 	t of last frame was 77.00ms (=1/12)
+9.3344 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+9.3371 	EXP 	window1: mouseVisible = False
+9.3376 	EXP 	window1: mouseVisible = False
+9.3379 	EXP 	window1: mouseVisible = False
+9.3390 	EXP 	window1: mouseVisible = False
+9.3401 	EXP 	window1: mouseVisible = False
+9.3464 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3471 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3484 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3501 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3516 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3531 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3539 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3552 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3567 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3580 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.3584 	DEBUG 	Uploading Texture Font fontname to graphics card
+9.3588 	DEBUG 	Upload of Texture Font fontname complete
+9.3625 	EXP 	window1: mouseVisible = False
+9.3627 	EXP 	window1: mouseVisible = False
+9.3636 	EXP 	window1: mouseVisible = False
+9.3644 	EXP 	window1: mouseVisible = False
+9.4137 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+39.6997 	EXP 	window1: mouseVisible = True
+39.7016 	DEBUG 	Saving data for untitled ExperimentHandler
+39.7021 	INFO 	saved data to /Users/arnavkapur/Desktop/Task/data/697165_untitled_2024-07-25_17h01.03.320.psydat
+39.7025 	INFO 	saved data to '/Users/arnavkapur/Desktop/Task/data/697165_untitled_2024-07-25_17h01.03.320.csv'
